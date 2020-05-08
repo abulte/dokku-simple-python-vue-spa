@@ -1,0 +1,4 @@
+flask
+flask-cors
+dataset
+psycopg2-binary
