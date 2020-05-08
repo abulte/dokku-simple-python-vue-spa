@@ -20,6 +20,7 @@ Launch frontend:
 
 ```
 cd frontend
+yarn
 yarn serve
 ```
 
@@ -46,7 +47,13 @@ git push dokku master
 
 The deployment process will run `init-db` thanks to the Procfile.
 
-:rocket: http://simple-spa.{host}/api
+Get a SSL certificate and redirect to https:
+
+```
+dokku letsencrypt simple-spa
+```
+
+:rocket: https://simple-spa.{host}/api
 
 ## Initial setup
 
