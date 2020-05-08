@@ -60,6 +60,7 @@ dokku letsencrypt simple-spa
 - Use multiple buildpacks, cf `.buildpacks` file.
 - Double `package.json`: node buildpack only works with a `package.json` at the root of the project. The root `package.json` "proxies" installation to the `frontend` dir through the `post-install` script. The first `yarn install` install dev dependencies w/ `production=false`, then runs the build in `frontend`, then installs again w/ `production=true` to prune dev dependencies (similar to what the buildpack should be doing on its own but doesn't because our frontend is in a subdirectory).
 - `requirements.txt` is kept at the root of the project for the same reasons.
+- `Procfile` uses `--chdir` for `gunicorn` and `package.json` uses `--cwd` for `yarn`.
 
 ## Initial setup
 
