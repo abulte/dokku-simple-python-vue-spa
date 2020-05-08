@@ -3,7 +3,7 @@ import uuid
 import click
 import dataset
 
-db = dataset.connect(os.getenv('DB_DSN', 'sqlite:///data.db'))
+db = dataset.connect(os.getenv('DATABASE_URL', 'sqlite:///data.db'))
 table = db["dummy_data"]
 
 

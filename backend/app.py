@@ -10,7 +10,7 @@ app = Flask(__name__,
 # CORS only for local dev
 cors = CORS(app, resources={r"/api/*": {"origins": "http://localhost:8080"}})
 
-db = dataset.connect(os.getenv('DB_DSN', 'sqlite:///data.db'))
+db = dataset.connect(os.getenv('DATABASE_URL', 'sqlite:///data.db'))
 table = db["dummy_data"]
 
 
