@@ -1,0 +1,11 @@
+{
+  "name": "dokku-simple-python-vue-spa",
+  "version": "0.1.0",
+  "scripts": {
+    "postinstall": "yarn install --prefix frontend"
+  },
+  "engines": {
+    "node": "13.x",
+    "yarn": "1.x"
+  }
+}
