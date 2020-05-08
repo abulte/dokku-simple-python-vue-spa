@@ -80,7 +80,7 @@ git init
 
 In `frontend/vue.config.js`:
 
-```json
+```javascript
 module.exports = {
   outputDir: '../dist',
   assetsDir: 'static'
